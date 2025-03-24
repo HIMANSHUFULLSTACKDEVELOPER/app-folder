@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Download</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .app-image {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .app-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .download-button {
+            display: inline-block;
+            background: linear-gradient(to right, #4776E6, #8E54E9);
+            color: white;
+            font-weight: bold;
+            padding: 16px 36px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(71, 118, 230, 0.4);
+        }
+        
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(71, 118, 230, 0.6);
+        }
+        
+        .download-button:active {
+            transform: translateY(1px);
+        }
+        
+        .download-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .download-button:hover::before {
+            left: 100%;
+        }
+        
+        .button-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .button-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtgR721aLeM4z9AWnFDiVSXwo6uo8YkdlPEg&s" alt="App Screenshot" class="app-image">
+        <a href="./rupalapk.apk" class="download-button">
+            <span class="button-text">
+                <span class="button-icon">↓</span>
+                Download App
+            </span>
+        </a>
+    </div>
+</body>
+</html>
